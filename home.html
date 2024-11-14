@@ -24,6 +24,10 @@
             font-family: "DM Sans", sans-serif;
             color: black;
         }
+        .container .nav-list{
+            display: none;
+            
+        }
 
         #main {
             background-image: url('./img/main.png');
@@ -31,6 +35,35 @@
             background-position: bottom center;
             background-size: cover;
         }
+        
+
+        .nav-list {
+            font-size: 70px;
+            flex-direction: column;
+            display:none;
+            background: gray;
+            position: absolute;
+            top: -100%;
+            right: -900px;
+            width: 80%;
+            height: 100vh;
+            padding-top: 80%;
+            transition: all 0.5s ease;
+        }
+
+            .nav-list.active {
+                right: 0;
+                transition: all 0.5s ease;
+                display: flow;
+                transition: all 0.5s ease;
+            }
+
+            .nav-list li {
+                text-align: left;
+                width: 100%;
+                padding: 10px 30px;
+                border-bottom: 1px solid var(--white);
+            }
 
         a {
             text-decoration: none;
@@ -64,36 +97,6 @@
             .nav-list a:hover:before {
                 width: 100%;
             }
-
-        nav {
-        .menu-btn {
-                display: block;
-            }
-
-            .nav-list {
-                flex-direction: column;
-                background: gray;
-                position: absolute;
-                top: -40%;
-                right: -900px;
-                width: 80%;
-                height: 100vh;
-                padding-top: 80%;
-                transition: all 0.5s ease;
-            }
-
-                .nav-list.active {
-                    right: 0;
-                }
-
-                .nav-list li:not(:last-child) {
-                    text-align: left;
-                    width: 100%;
-                    padding: 10px 30px;
-                    border-bottom: 1px solid var(--white);
-                }
-
-
         .btn {
             padding: 12px 20px;
             background: transparent;
@@ -128,7 +131,9 @@
             }
 
             .main-contecnt .main-heading {
-                font-size: 80px;
+                display:inline;
+                align-items: center;
+                font-size: 100px;
                 margin-top: -20px;
             }
 
@@ -197,7 +202,9 @@
             }
 
             #testmonial h1 {
-                font-family: 50px;
+                color:black ;
+                font-size: 20px;
+                
                 font-family: 'Forum', sans-serif;
                 text-align: center;
             }
@@ -338,15 +345,14 @@
                     background-color: #ffffff;
                 }
 
-        /*responsive*/
-        @media(max-width: 867em) {
+        @media(max-width: 767px) {
             .footer-col {
                 width: 50%;
                 margin-bottom: 30px;
             }
         }
 
-        @media(max-hight: 574em) {
+        @media(max-hight: 574px) {
             .footer-col {
                 width: 100%;
             }
@@ -402,7 +408,7 @@
                 <li><a href="./about.html">Shops</a></li>
                 <li><a href="./booking.html">Booking</a></li>
                 <li><a href="./login.html">Login</a></li>
-                <li><button class="btn btn-secondery"> </button></li>
+
             </ul>
             <img src="./img/Untitled-1.png" alt="" class="menu-btn">
         </nav>
