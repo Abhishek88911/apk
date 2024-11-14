@@ -66,21 +66,33 @@
             }
 
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-list {
-            display: none;
-            list-style: none;
-            gap: 20px;
-            align-items: center;
-        }
-
-            .nav-list a {
-                color: black;
+        .menu-btn {
+                display: block;
             }
+
+            .nav-list {
+                flex-direction: column;
+                background: gray;
+                position: absolute;
+                top: -40%;
+                right: -900px;
+                width: 80%;
+                height: 100vh;
+                padding-top: 80%;
+                transition: all 0.5s ease;
+            }
+
+                .nav-list.active {
+                    right: 0;
+                }
+
+                .nav-list li:not(:last-child) {
+                    text-align: left;
+                    width: 100%;
+                    padding: 10px 30px;
+                    border-bottom: 1px solid var(--white);
+                }
+
 
         .btn {
             padding: 12px 20px;
